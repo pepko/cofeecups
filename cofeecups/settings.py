@@ -36,6 +36,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'about_me',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -65,6 +66,18 @@ DATABASES = {
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
+TEMPLATE_LOADERS = (
+    ('django.template.loaders.cached.Loader', (
+        'django.template.loaders.filesystem.Loader',
+        'django.template.loaders.app_directories.Loader',
+    )),
+)
+
+TEMPLATE_DIRS = (
+    
+        BASE_DIR + "/cofeecups/templates/",
+    
+)
 
 LANGUAGE_CODE = 'en-us'
 
